@@ -33,11 +33,14 @@ const queryEndpoint = async (endpoint, start_page, max_page, isSearch = false) =
   return data;
 }
 
-export function GetAllTeams() {
-  return (useSWR([BASE_URL + ALL_TEAMS_SUFFIX, 1, 15], queryEndpoint)).data;
+export function GetAllTeams(teamId) {
+  return (useSWR([BASE_URL + ALL_TEAMS_SUFFIX + (teamId !== '0' ? teamSearchByIdTemplate(teamId) : ""), 1, 15, teamId !== '0'], queryEndpoint)).data;
 }
 
 export function GetTeamById(id) {
+  if (id === "-") {
+    return {}
+  }
   return useSWR([BASE_URL + ALL_TEAMS_SUFFIX + teamSearchByIdTemplate(id), 1, 2, true], queryEndpoint).data;
 }
 

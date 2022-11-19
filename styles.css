@@ -2,6 +2,17 @@
 /* LAYOUT HELPERS */
 /* !!!!!!!!!!!!!!!!!!!! */
 
+:root {
+  --font-family:
+    "Arial",
+    --deep-blue: rgb(49, 11, 218);
+  --deep-red: rgb(239, 6, 72);
+  --white: #fbfafa;
+  --charcoal: rgb(45, 43, 43);
+  --layout-guide-item: rgba(255, 89, 0, 0.975);
+  --layout-guide-content: rgb(0, 183, 255);
+}
+
 .teamTitle {
   font-size: 30px;
   font-weight: 400;
@@ -59,7 +70,7 @@
   overflow: auto;
 }
 
-#container {
+.container {
   width: 100%;
   display: flexbox;
   margin: 5 auto;

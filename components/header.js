@@ -9,13 +9,13 @@ import basketBallIcon from "../resources/basketball.png"
 // so it appears on all pages that use the default layout
 export default function Header() {
   return (
-    <div id="headre">
+    <>
       <div className="wave"></div>
       <div className="wave"></div>
       <div className="wave"></div>
       <h1 id="mainTitle" className="content">NBA Teams Search <Image id="basketballIcon"
         src={basketBallIcon} width="50" height="40" alt="Basketball"></Image>
       </h1>
-    </div >
+    </>
   )
 }
