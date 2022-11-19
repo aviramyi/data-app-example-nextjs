@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import { BASE_URL, allTeamsSuffix as ALL_TEAMS_SUFFIX, ALL_PLAYERS_SUFFIX, teamSearchByIdTemplate, delay } from "../config";
+import { BASE_URL, ALL_TEAMS_SUFFIX, ALL_PLAYERS_SUFFIX, teamSearchByIdTemplate, delay } from "../config";
 
 // UseSWR needs a fetcher function.
 // This is a generic one based on vanilla fetch().
@@ -34,7 +34,7 @@ const queryEndpoint = async (endpoint, start_page, max_page, isSearch = false) =
 }
 
 export function GetAllTeams() {
-  return useSWR([BASE_URL + ALL_TEAMS_SUFFIX, 1, 15], queryEndpoint).data;
+  return (useSWR([BASE_URL + ALL_TEAMS_SUFFIX, 1, 15], queryEndpoint)).data;
 }
 
 export function GetTeamById(id) {
