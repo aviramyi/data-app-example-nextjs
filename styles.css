@@ -73,7 +73,7 @@
 .container {
   width: 100%;
   display: flexbox;
-  margin: 5 auto;
+  margin: 5px 5px 5px;
   box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 5px rgba(0, 0, 0, 0.19);
   background: rgba(253, 253, 253, 0.7)
 }
@@ -173,7 +173,7 @@
 
 /* adjustments for large screens, like laptops and desktops */
 @media (min-width: 992px) {
-  #container {
+  .container {
     width: 992px;
     margin: 0 auto;
   }
