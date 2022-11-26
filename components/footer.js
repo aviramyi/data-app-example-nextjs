@@ -5,8 +5,8 @@ export default function Footer() {
     <footer id="footer">
       <div className="container">
         <div className="row">
-          <div className="item">
-            <div className="content">
+          <div className="footer">
+            <div className="content footerContent">
               &copy; 2022 NBA Teams Search
             </div>
           </div>

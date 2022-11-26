@@ -16,6 +16,14 @@ export default function Header() {
       <h1 id="mainTitle" className="content">NBA Teams Search <Image id="basketballIcon"
         src={basketBallIcon} width="50" height="40" alt="Basketball"></Image>
       </h1>
+      <div className="item navbar-menu">
+        <div className="content">
+          <ul>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/liked_player">Liked player</Link></li>
+          </ul>
+        </div>
+      </div>
     </>
   )
 }

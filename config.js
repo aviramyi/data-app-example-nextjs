@@ -5,6 +5,14 @@ export const ALL_TEAMS_SUFFIX = "/teams";
 export const ALL_PLAYERS_SUFFIX = "/players"
 export const teamSearchByIdTemplate = (teamId) => `/${teamId}`
 
+// Supabase
+export const SUPABASE_URL = process.env.SUPABASE_URL;
+export const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY;
+export const LIKED_PLAYERS_TABLE_NAME = "liked_player"
+
+//API 
+export const LIKED_PLAYERS_ENDPOINT = "/api/liked_player/"
+
 export function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
 }

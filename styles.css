@@ -4,8 +4,8 @@
 
 :root {
   --font-family:
-    "Arial",
-    --deep-blue: rgb(49, 11, 218);
+    sans-serif;
+  --deep-blue: rgb(49, 11, 218);
   --deep-red: rgb(239, 6, 72);
   --white: #fbfafa;
   --charcoal: rgb(45, 43, 43);
@@ -20,6 +20,31 @@
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+.navbar-menu ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-menu li {
+  margin: 0 0.5rem;
+}
+
+a {
+  font-weight: 800;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #9a4a3c, #b393d3);
+
+}
+
+.a:hover {
+  color: rgb(0, 183, 255)
 }
 
 #mainTitle {
@@ -41,6 +66,11 @@
 .filterObject {
   text-align: center;
   margin: 1%;
+  align-items: center;
+}
+
+.footer {
+  justify-content: center;
   align-items: center;
 }
 
@@ -194,6 +224,7 @@ body {
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
   background-attachment: fixed;
+  font-family: var(--font-family);
 }
 
 /* !!!!!!!!!!!!!!!!!!!! */
@@ -212,6 +243,12 @@ body {
   100% {
     transform: translateY(-60%);
   }
+}
+
+.formContent {
+  margin: 25px 0;
+  margin-right: 20px;
+  justify-content: center;
 }
 
 #basketballIcon {
