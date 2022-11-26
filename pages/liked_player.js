@@ -40,11 +40,11 @@ export default function LikedPlayerPage() {
         <div className="row">
             <div className="content">
                 <div className="contentDetails">
-                    Which player is your favorit? feel the form below and let us know!
+                    Which player is your favorite? feel the form below and let us know!
                 </div>
                 <div className="formContent">
                     {formResponseStatus ?
-                        <div>{formResponseStatus === 200 ? "Thank you. you favorit player has been logged" : "Something went wrong."}</div> :
+                        <div>{formResponseStatus === 200 ? "Thank you. you favorite player has been logged" : "Something went wrong."}</div> :
                         <form onSubmit={handleSubmit}>
                             <input className="formContent" id="form-user-nickname" placeholder="Your nickname" value={formData.user_nickname} onChange={handleChange} required />
                             <input className="formContent" id="form-player-name" placeholder="Liked player name" value={formData.player_name} onChange={handleChange} required />
