@@ -105,7 +105,7 @@ export default function IndexPage() {
       <Row teamList={currentlySelectTeams} playerList={currentPlayerData} />
       <div
         className="cf-turnstile checkbox"
-        data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+        data-sitekey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY}
         data-callback="javascriptCallback"
       />
     </>
