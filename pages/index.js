@@ -76,7 +76,7 @@ export default function IndexPage() {
       case 'nameDesc':
         currentlySelectTeams.sort((a, b) => a.full_name > b.full_name ? -1 : 1);
         break;
-      case 'division':
+      case 'divisions':
         currentlySelectTeams.sort((a, b) => a.division < b.division ? -1 : 1);
         break;
     }
