@@ -12,6 +12,10 @@ function getPlayerOfSelectedTeams(selectedTeams, allPlayers) {
   return Object.values(currentPlayers).filter((player) => teamIds.includes(player.team.id));
 }
 
+function cfTurnstileCallback(token) {
+  console.log(token)
+}
+
 // Our main page. Here we are loading data "on the client"
 // And showing some loading screen(s) while waiting for the data to be ready
 export default function IndexPage() {
@@ -94,6 +98,7 @@ export default function IndexPage() {
       <div
         className="cf-turnstile checkbox"
         data-sitekey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY}
+        data-callback="cfTurnstileCallback"
       />
     </>
   )
