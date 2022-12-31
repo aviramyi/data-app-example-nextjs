@@ -4,6 +4,7 @@ import Message from "../components/message";
 import Filters from "../components/filters";
 import Row from "../components/row";
 import { GetAllPlayers, GetAllTeams, GetTeamById } from "../hooks/data";
+import Script from 'next/script'
 
 function getPlayerOfSelectedTeams(selectedTeams, allPlayers) {
   const teamIds = Object.values(selectedTeams).map((element) => element.id);
@@ -84,7 +85,16 @@ export default function IndexPage() {
   return (
     <>
       {memoFilters}
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async={true}
+        defer={true}
+      />
       <Row teamList={currentlySelectTeams} playerList={currentPlayerData} />
+      <div
+        className="cf-turnstile checkbox"
+        data-sitekey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY}
+      />
     </>
   )
 }
